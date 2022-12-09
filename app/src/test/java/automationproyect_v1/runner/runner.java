@@ -1,4 +1,4 @@
-package runner;
+package automationproyect_v1.runner;
 
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
