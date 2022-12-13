@@ -7,6 +7,7 @@ public class GooglePage extends BasePage {
     private String btnSearchGoogle = "//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']";
     //maybe bug with search with browser is in english
     private String SearchInputGoogle = "//input[@title='Buscar']";
+    private String searchResultOfGoogle = "//div[@id='hdtb-tls']";
 
 
 
@@ -25,6 +26,10 @@ public class GooglePage extends BasePage {
     public void captureSearchCriteria(String criteraToSearch){
         write(SearchInputGoogle,criteraToSearch);
     }   
+
+    public String resultSearchGoogle(){
+        return textFromElement(searchResultOfGoogle);
+    }
 
     
 

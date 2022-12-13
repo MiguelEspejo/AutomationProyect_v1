@@ -2,7 +2,6 @@ package automationproyect_v1.pages;
 
 import java.time.Duration;
 
-import org.junit.internal.runners.statements.ExpectException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -78,6 +77,28 @@ public class BasePage {
     public void rightClick(String locator){
         action.contextClick(Find(locator));
     }
+    
+    //popouts and alerts
+    public void swtichToFrame(int iFrameIndex){
+        driver.switchTo().frame(iFrameIndex);
+
+    }   
+    
+    public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+
+    }
+
+    public void dismissAlert(){
+        driver.switchTo().alert().dismiss();
+    }
+
+    //assertions get text
+    public String  textFromElement(String locator){
+        return Find(locator).getText();
+        
+    }
+   
    
 
 }   

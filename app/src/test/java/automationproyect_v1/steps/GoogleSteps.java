@@ -1,5 +1,8 @@
 package automationproyect_v1.steps;
 
+
+import org.junit.Assert;
+
 import automationproyect_v1.pages.GooglePage;
 import io.cucumber.java.en.*;
 
@@ -30,6 +33,7 @@ public class GoogleSteps {
 
   @Then("^obtengo resultados de la busqueda$")
   public void validateResult(){
+    Assert.assertEquals("Herramientas", google.resultSearchGoogle());
 
   }
   
