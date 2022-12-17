@@ -6,7 +6,7 @@ public class GooglePage extends BasePage {
 
     private String btnSearchGoogle = "//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']";
     //maybe bug with search with browser is in english
-    private String SearchInputGoogle = "//input[@title='Buscar']";
+    private String SearchInputGoogle = "//input[@title='Buscarrr']";
     private String searchResultOfGoogle = "//div[@id='hdtb-tls']";
 
 
@@ -29,6 +29,10 @@ public class GooglePage extends BasePage {
 
     public String resultSearchGoogle(){
         return textFromElement(searchResultOfGoogle);
+    }
+
+    public boolean btnSearchDisplayed(){
+        return elementIsDisplayed(btnSearchGoogle);
     }
 
     
