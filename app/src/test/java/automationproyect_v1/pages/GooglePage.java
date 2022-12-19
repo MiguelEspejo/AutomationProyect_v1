@@ -1,37 +1,32 @@
+
 package automationproyect_v1.pages;
 
-
-
 public class GooglePage extends BasePage {
-
     private String btnSearchGoogle = "//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']";
-    //maybe bug with search with browser is in english
     private String SearchInputGoogle = "//input[@title='Buscar']";
     private String searchResultOfGoogle = "//div[@id='hdtb-tls']";
-
-
 
     public GooglePage() {
         super(driver);
     }
 
-    public void navigateToGoogle(){
+    public void navigateToGoogle() {
         BasePage.navigateTo("https://www.google.com");
     }
 
-    public void clickBtnSearchGoogle(){
-        clickElement(btnSearchGoogle);
-    }
-    
-    public void captureSearchCriteria(String criteraToSearch){
-        write(SearchInputGoogle,criteraToSearch);
-    }   
-
-    public String resultSearchGoogle(){
-        return textFromElement(searchResultOfGoogle);
+    public void clickBtnSearchGoogle() {
+        this.clickElement(this.btnSearchGoogle);
     }
 
-    
+    public void captureSearchCriteria(String criteraToSearch) {
+        this.write(this.SearchInputGoogle, criteraToSearch);
+    }
 
+    public String resultSearchGoogle() {
+        return this.textFromElement(this.searchResultOfGoogle);
+    }
 
+    public boolean btnSearchDisplayed() {
+        return this.elementIsDisplayed(this.btnSearchGoogle);
+    }
 }

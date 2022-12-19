@@ -18,10 +18,10 @@ public class GoogleSteps {
 
   }
 
-  @When("^Capturo los param para buscar$")
-  public void captureParamToSearch(){
+  @When("^Capturo el (.+) param para buscar$")
+  public void captureParamToSearch(String criteraToSearch){
     //hardcode: before create with cucumber more inputs
-    google.captureSearchCriteria("hola mundo");
+    google.captureSearchCriteria(criteraToSearch);
 
   }
 
