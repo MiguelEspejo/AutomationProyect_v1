@@ -34,11 +34,6 @@ public class BasePage {
         driver.get(url);
     }
 
-    public static void closeBrowser(){
-        driver.quit();
-
-    }
-
     private WebElement Find(String locator) {
         //only xpath (major practice and standar for all pages)
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
@@ -101,21 +96,6 @@ public class BasePage {
     //assertions get text
     public String  textFromElement(String locator){
         return Find(locator).getText();
-        
-    }
-
-    public boolean elementIsDisplayed(String locator){
-        return Find(locator).isDisplayed();
-    
-    }
-
-    public boolean elementIsEnabled(String locator){
-        return Find(locator).isEnabled();
-
-    }
-
-    public boolean elementIsSelected(String locator){
-        return Find(locator).isSelected();
         
     }
    
