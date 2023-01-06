@@ -6,6 +6,10 @@ public class GooglePage extends BasePage {
     private String SearchInputGoogle = "//input[@title='Buscar']";
     private String searchResultOfGoogle = "//div[@id='hdtb-tls']";
 
+
+    //**sandbox**
+
+
     public GooglePage() {
         super(driver);
     }
