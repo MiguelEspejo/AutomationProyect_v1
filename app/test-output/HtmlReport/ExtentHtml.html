@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 6, 2023 11:52:10 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 7, 2023 12:55:08 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +64,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,8 +76,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@esc2</a></li>
-					<li><a href='#'>@GoogleTest</a></li>
+					<li><a href='#'>@busquedaMercadolibre</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -119,12 +118,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -137,12 +136,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>4</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    5</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,14 +156,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>16</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='25%'>
+                    <span class='strong'>5</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    5</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    10</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -185,11 +184,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Probar las busuqedas de Google</span>
-						<span class='test-time'>Jan 6, 2023 11:52:11 AM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-name'>Ingresar a Mercadolibre realizar filtros por categorias</span>
+						<span class='test-time'>Jan 7, 2023 12:55:09 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -199,124 +198,193 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 09.278</span>
+	<span class='duration right label'>00 00 02.973</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Realizo busqueda google</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validación de la Categoría Hogar y electodomésticos area de Climatización</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>criteraToSearch</td></tr><tr><td>Hola mundo</td></tr><tr><td>Youtube</td></tr><tr><td>Twitch</td></tr><tr><td>linkedIN</td></tr></table></div>
 	
+		<div class='category-list'>
+				<span class='category label'>@busquedaMercadolibre</span>
+		</div>
 	
 	<ul class='steps'>
-		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='3' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.MercadolibreSteps.navigateToGoogle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a MercadoLibre</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='4' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
-
-				</li>
-				<li test-id='5' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el Hola mundo param para buscar</h6>
-
-				</li>
-				<li test-id='6' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
-
-				</li>
-				<li test-id='7' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
-
-				</li>
-			</ul>
 		</li>
-		<li test-id='9' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='4' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Ingreso a la opcion categorias</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='10' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
-
-				</li>
-				<li test-id='11' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el Youtube param para buscar</h6>
-
-				</li>
-				<li test-id='12' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
-
-				</li>
-				<li test-id='13' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
-
-				</li>
-			</ul>
+					<div class="node-step">Step undefined</div>
 		</li>
-		<li test-id='15' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='5' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Ingreso a la opción Hogar y  Electrodomesticos</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='16' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
-
-				</li>
-				<li test-id='17' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el Twitch param para buscar</h6>
-
-				</li>
-				<li test-id='18' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
-
-				</li>
-				<li test-id='19' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
-
-				</li>
-			</ul>
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='21' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='6' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Valido el nombre del area Climatización y el numero de resultados obtenidos</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='22' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='8' status='fail'>
 
-				</li>
-				<li test-id='23' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el linkedIN param para buscar</h6>
+	<span class='duration right label'>00 00 00.761</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validación de la Categoría Tecnología area Celulares y smartphones</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@busquedaMercadolibre</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='9' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.MercadolibreSteps.navigateToGoogle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a MercadoLibre</div>
 
-				</li>
-				<li test-id='24' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
 
-				</li>
-				<li test-id='25' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
+		</li>
+		<li test-id='10' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Ingreso a la opcion categorias</div>
 
-				</li>
-			</ul>
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='11' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Ingreso a la opción Tecnologia</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='12' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Valido el nombre del area Celulares y SmarthPhones y el numero de resultados obtenidos</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='14' status='fail'>
+
+	<span class='duration right label'>00 00 00.718</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validación de la Categoría Belleza y cuidado personal area Perfumes importados</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@busquedaMercadolibre</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='15' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.MercadolibreSteps.navigateToGoogle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a MercadoLibre</div>
+
+
+		</li>
+		<li test-id='16' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Ingreso a la opcion categorias</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='17' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Ingreso a la opción Belleza y cuidado personal</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='18' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Valido el nombre del area Perfumes importados y el numero de resultados obtenidos</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='20' status='fail'>
+
+	<span class='duration right label'>00 00 00.742</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validación de la Categoría Herramientas e industria area Industria textil</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@busquedaMercadolibre</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='21' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.MercadolibreSteps.navigateToGoogle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a MercadoLibre</div>
+
+
+		</li>
+		<li test-id='22' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Ingreso a la opcion categorias</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='23' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Ingreso a la opción Herramientas e industria</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='24' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Valido el nombre del area Industria textil y el numero de resultados obtenidos</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='26' status='fail'>
+
+	<span class='duration right label'>00 00 00.554</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validación de la Categoría Juguetes y bebes area Cuarto del bebe</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@busquedaMercadolibre</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='27' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.MercadolibreSteps.navigateToGoogle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a MercadoLibre</div>
+
+
+		</li>
+		<li test-id='28' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Ingreso a la opcion categorias</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='29' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Ingreso a la opción Juguetes y bebes</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='30' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Valido el nombre del area Cuarto del bebe y el numero de resultados obtenidos</div>
+
+
+					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -364,15 +432,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@esc2</span>
+						<span class='category-name'>@busquedaMercadolibre</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label fail'>5</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 5</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -386,72 +454,29 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 6, 2023 11:52:11 AM</td>
-										<td class='linked' test-id='3'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 7, 2023 12:55:09 PM</td>
+										<td class='linked' test-id='2'>Validación de la Categoría Hogar y electodomésticos area de Climatización</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 6, 2023 11:52:14 AM</td>
-										<td class='linked' test-id='9'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 7, 2023 12:55:12 PM</td>
+										<td class='linked' test-id='8'>Validación de la Categoría Tecnología area Celulares y smartphones</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 6, 2023 11:52:17 AM</td>
-										<td class='linked' test-id='15'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 7, 2023 12:55:12 PM</td>
+										<td class='linked' test-id='14'>Validación de la Categoría Belleza y cuidado personal area Perfumes importados</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 6, 2023 11:52:18 AM</td>
-										<td class='linked' test-id='21'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@GoogleTest</span>
-						<span class='category-status right'>
-						<span class='label pass'>4</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 6, 2023 11:52:11 AM</td>
-										<td class='linked' test-id='3'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 7, 2023 12:55:13 PM</td>
+										<td class='linked' test-id='20'>Validación de la Categoría Herramientas e industria area Industria textil</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 6, 2023 11:52:14 AM</td>
-										<td class='linked' test-id='9'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 6, 2023 11:52:17 AM</td>
-										<td class='linked' test-id='15'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 6, 2023 11:52:18 AM</td>
-										<td class='linked' test-id='21'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 7, 2023 12:55:14 PM</td>
+										<td class='linked' test-id='26'>Validación de la Categoría Juguetes y bebes area Cuarto del bebe</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -481,31 +506,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>16</div>
+					<div class='panel-lead'>20</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 6, 2023 11:52:10 AM</div>
+					<div class='panel-lead'>Jan 7, 2023 12:55:08 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 6, 2023 11:52:20 AM</div>
+			 		<div class='panel-lead'>Jan 7, 2023 12:55:14 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 09.645</div>
+					<div class='panel-lead'>00 00 06.321</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -521,21 +546,12 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@esc2</td>
-							<td>4</td>
+							<td>@busquedaMercadolibre</td>
 							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@GoogleTest</td>
-							<td>4</td>
-							<td>0</td>
+							<td>5</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -550,34 +566,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 4,
-				passChild: 4,
-				failChild: 0,
+				childCount: 5,
+				passChild: 0,
+				failChild: 5,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 16,
-				passGrandChild: 16,
-				failGrandChild: 0,
+				grandChildCount: 20,
+				passGrandChild: 5,
+				failGrandChild: 5,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 10,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Probar las busuqedas de Google":9.281
+			        "Ingresar a Mercadolibre realizar filtros por categorias":5.792
 			};
 		</script>
 		

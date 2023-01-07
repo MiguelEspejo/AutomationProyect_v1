@@ -1,3 +1,4 @@
+@busquedaMercadolibre
 Feature: Ingresar a Mercadolibre realizar filtros por categorias
 
 Rule: Realizar la prueba del filtro de Categorias en la pagina de MercadoLibre

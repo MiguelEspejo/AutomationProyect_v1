@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
     glue = {"automationproyect_v1.steps"},
     plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "json:target/cucumber-reports.json"},
     monochrome = true,
-    tags = "@esc2"
+    tags = "@busquedaMercadolibre"
 )
 
 public class runner {
