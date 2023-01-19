@@ -46,7 +46,13 @@ application {
     mainClass = 'automationproyect_v1.runner'
 }
 
+test {
+    systemProperty "cucumberOptions", System.getProperty("cucumber.options")
+}
+ 
+ /*
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+*/
