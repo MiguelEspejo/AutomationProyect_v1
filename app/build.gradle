@@ -15,7 +15,7 @@ plugins {
 group 'Framework_automatizacion'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 17
+sourceCompatibility = 13
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -41,12 +41,19 @@ dependencies {
 
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'automationproyect_v1.runner'
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumberOptions")
 }
 
+application {
+    // Define the main class for the application.
+    mainClass = 'automationproyect_v1'
+
+}
+/*
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
+
     useJUnitPlatform()
 }
+ */
