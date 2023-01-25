@@ -5,6 +5,7 @@
 
 package automationproyect_v1.pages;
 
+import java.sql.Driver;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,11 +27,12 @@ public class BasePage {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10L));
+        driver.manage().window().maximize();
     }
 
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10L));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15L));
     }
 
     public static void navigateTo(String url) {
@@ -40,6 +42,7 @@ public class BasePage {
     public static void closeBrowser() {
         driver.quit();
     }
+
 
     private WebElement Find(String locator) {
         return (WebElement)wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
@@ -92,6 +95,10 @@ public class BasePage {
     public void dismissAlert() {
         driver.switchTo().alert().dismiss();
     }
+    public void acceptAlert() throws InterruptedException {
+        Thread.sleep(2000); //cambiar por otra espera optima
+        driver.switchTo().alert().accept();
+    }
 
     public String textFromElement(String locator) {
         return this.Find(locator).getText();
@@ -108,4 +115,5 @@ public class BasePage {
     public boolean elementIsSelected(String locator) {
         return this.Find(locator).isSelected();
     }
+
 }
