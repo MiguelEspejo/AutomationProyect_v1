@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 23, 2023 04:48:50 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 25, 2023 12:06:47 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +65,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,8 +77,10 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@esc2</a></li>
-					<li><a href='#'>@GoogleTest</a></li>
+					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@HappyPath</a></li>
+					<li><a href='#'>@SignUp-Login</a></li>
+					<li><a href='#'>@RegressionDemoBlaze</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -119,12 +122,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -137,12 +140,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>4</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'>
+                    <span class='strong'>3</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,14 +160,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>16</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='85%'>
+                    <span class='strong'>12</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='7%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='7%'>
+                    1</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -185,11 +188,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Probar las busuqedas de Google</span>
-						<span class='test-time'>Jan 23, 2023 04:48:50 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-name'>Revisar la funcionalidad del sitio de compras demoblaze.com</span>
+						<span class='test-time'>Jan 25, 2023 12:06:48 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -199,124 +202,159 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 10.562</span>
+	<span class='duration right label'>00 00 18.305</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Realizo busqueda google</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verificar que al seleccionar y agregar productos al carrito estos se muestren correctamente</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>criteraToSearch</td></tr><tr><td>Hola mundo</td></tr><tr><td>Youtube</td></tr><tr><td>Twitch</td></tr><tr><td>linkedIN</td></tr></table></div>
 	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@HappyPath</span>
+				<span class='category label'>@RegressionDemoBlaze</span>
+		</div>
 	
 	<ul class='steps'>
-		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='3' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.navigateToTiendaDemoBlaze())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a la tienda DemoBlaze</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='4' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
-
-				</li>
-				<li test-id='5' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el Hola mundo param para buscar</h6>
-
-				</li>
-				<li test-id='6' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
-
-				</li>
-				<li test-id='7' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
-
-				</li>
-			</ul>
 		</li>
-		<li test-id='9' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='4' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.selProdTienda())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Selecciono diferentes productos de la tienda y los agrego al carrito</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='10' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
-
-				</li>
-				<li test-id='11' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el Youtube param para buscar</h6>
-
-				</li>
-				<li test-id='12' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
-
-				</li>
-				<li test-id='13' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
-
-				</li>
-			</ul>
+					<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'Add to cart')] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MIGUEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52975/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c4d483919b6a12c002e3009c84c5acd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at automationproyect_v1.pages.BasePage.Find(BasePage.java:48)
+	at automationproyect_v1.pages.BasePage.clickElement(BasePage.java:52)
+	at automationproyect_v1.pages.DemoblazePage.selectArcticulos(DemoblazePage.java:61)
+	at automationproyect_v1.steps.DemoblazeSteps.selProdTienda(DemoblazeSteps.java:17)
+	at ?.Selecciono diferentes productos de la tienda y los agrego al carrito(file:///C:/Users/Miguel%20Espejo/Documents/AutomationProyect/AutomationProyect_v1Intj/app/src/test/resources/features/Demoblaze.feature:12)
+</textarea>
 		</li>
-		<li test-id='15' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='5' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.carritoCompras())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Ingreso al carrito y valido que se muestren correctamente</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='16' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
-
-				</li>
-				<li test-id='17' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el Twitch param para buscar</h6>
-
-				</li>
-				<li test-id='18' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
-
-				</li>
-				<li test-id='19' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
-
-				</li>
-			</ul>
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='21' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Realizo busqueda google</div>
+		<li test-id='6' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>automationproyect_v1.steps.Hooks.tearDown(io.cucumber.java.Scenario)</div>
 
-				<div class='category-list'>
-						<span class='category label'>@GoogleTest</span>
-						<span class='category label'>@esc2</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='22' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.navigateToGoogle()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a google</h6>
+					<div class="node-step">Escenario Fallado</div>
+					<div class="node-step">image-report</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='7' status='pass'>
 
-				</li>
-				<li test-id='23' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.captureParamToSearch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Capturo el linkedIN param para buscar</h6>
+	<span class='duration right label'>00 00 11.420</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se permita eliminar productos del carrito sin inconvenientes</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@RegressionDemoBlaze</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='8' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.navigateToTiendaDemoBlaze())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a la tienda DemoBlaze</div>
 
-				</li>
-				<li test-id='24' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.clicOnBtnBuscar()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clic en el boton buscar</h6>
 
-				</li>
-				<li test-id='25' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="automationproyect_v1.steps.GoogleSteps.validateResult()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then obtengo resultados de la busqueda</h6>
+		</li>
+		<li test-id='9' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.selProdTiendaEliminar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Selecciono diferentes productos de tienda de la categoria laptops</div>
 
-				</li>
-			</ul>
+
+		</li>
+		<li test-id='10' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.carritoComprasEliminar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Ingreso al carrito y elimino productos no deseados</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='12' status='pass'>
+
+	<span class='duration right label'>00 00 05.099</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se envien correctamente mensajes de contacto</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@RegressionDemoBlaze</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='13' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.navigateToTiendaDemoBlaze())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a la tienda DemoBlaze</div>
+
+
+		</li>
+		<li test-id='14' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.selecOpcContacto())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Selecciono la opcion contacto</div>
+
+
+		</li>
+		<li test-id='15' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.capturaInfContac())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Capturo la infomracion de contacto y envio el mensaje</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='17' status='pass'>
+
+	<span class='duration right label'>00 00 16.922</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se permita crear y logiar usuarios sin inconvenientes</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@RegressionDemoBlaze</span>
+				<span class='category label'>@SignUp-Login</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='18' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.navigateToTiendaDemoBlaze())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Navego a la tienda DemoBlaze</div>
+
+
+		</li>
+		<li test-id='19' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.seleccOpcCrearUsuario())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Selecciono la opcion para crear usuario</div>
+
+
+		</li>
+		<li test-id='20' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.iniciarSesion())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se creeo el usuario correctamente</div>
+
+
+		</li>
+		<li test-id='21' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(automationproyect_v1.steps.DemoblazeSteps.registroUsrRepLoginInv())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verifico que no se permita registrar un usuario con el mismo username y que no se permita ingresar con credenciales invalidas</div>
+
+
 		</li>
 	</ul>
 </div>
@@ -364,15 +402,16 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@esc2</span>
+						<span class='category-name'>@Smoke</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label pass'>3</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -386,23 +425,23 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 23, 2023 04:48:50 PM</td>
-										<td class='linked' test-id='3'>Realizo busqueda google</td>
+										<td>Jan 25, 2023 12:06:48 PM</td>
+										<td class='linked' test-id='2'>Verificar que al seleccionar y agregar productos al carrito estos se muestren correctamente</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 25, 2023 12:07:06 PM</td>
+										<td class='linked' test-id='7'>Verificar que se permita eliminar productos del carrito sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 23, 2023 04:48:54 PM</td>
-										<td class='linked' test-id='9'>Realizo busqueda google</td>
+										<td>Jan 25, 2023 12:07:18 PM</td>
+										<td class='linked' test-id='12'>Verificar que se envien correctamente mensajes de contacto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 23, 2023 04:48:56 PM</td>
-										<td class='linked' test-id='15'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 23, 2023 04:48:58 PM</td>
-										<td class='linked' test-id='21'>Realizo busqueda google</td>
+										<td>Jan 25, 2023 12:07:23 PM</td>
+										<td class='linked' test-id='17'>Verificar que se permita crear y logiar usuarios sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -412,14 +451,47 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@GoogleTest</span>
+						<span class='category-name'>@HappyPath</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 25, 2023 12:06:48 PM</td>
+										<td class='linked' test-id='2'>Verificar que al seleccionar y agregar productos al carrito estos se muestren correctamente</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SignUp-Login</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
 						</div>
@@ -434,23 +506,57 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 23, 2023 04:48:50 PM</td>
-										<td class='linked' test-id='3'>Realizo busqueda google</td>
+										<td>Jan 25, 2023 12:07:23 PM</td>
+										<td class='linked' test-id='17'>Verificar que se permita crear y logiar usuarios sin inconvenientes</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RegressionDemoBlaze</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 25, 2023 12:06:48 PM</td>
+										<td class='linked' test-id='2'>Verificar que al seleccionar y agregar productos al carrito estos se muestren correctamente</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 25, 2023 12:07:06 PM</td>
+										<td class='linked' test-id='7'>Verificar que se permita eliminar productos del carrito sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 23, 2023 04:48:54 PM</td>
-										<td class='linked' test-id='9'>Realizo busqueda google</td>
+										<td>Jan 25, 2023 12:07:18 PM</td>
+										<td class='linked' test-id='12'>Verificar que se envien correctamente mensajes de contacto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 23, 2023 04:48:56 PM</td>
-										<td class='linked' test-id='15'>Realizo busqueda google</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 23, 2023 04:48:58 PM</td>
-										<td class='linked' test-id='21'>Realizo busqueda google</td>
+										<td>Jan 25, 2023 12:07:23 PM</td>
+										<td class='linked' test-id='17'>Verificar que se permita crear y logiar usuarios sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -467,7 +573,75 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 25, 2023 12:06:50 PM</td>
+										<td class='linked' test-id='4'>When Selecciono diferentes productos de la tienda y los agrego al carrito</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'Add to cart')] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MIGUEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52975/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c4d483919b6a12c002e3009c84c5acd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at automationproyect_v1.pages.BasePage.Find(BasePage.java:48)
+	at automationproyect_v1.pages.BasePage.clickElement(BasePage.java:52)
+	at automationproyect_v1.pages.DemoblazePage.selectArcticulos(DemoblazePage.java:61)
+	at automationproyect_v1.steps.DemoblazeSteps.selProdTienda(DemoblazeSteps.java:17)
+	at ?.Selecciono diferentes productos de la tienda y los agrego al carrito(file:///C:/Users/Miguel%20Espejo/Documents/AutomationProyect/AutomationProyect_v1Intj/app/src/test/resources/features/Demoblaze.feature:12)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -487,25 +661,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>16</div>
+					<div class='panel-lead'>14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 23, 2023 04:48:50 PM</div>
+					<div class='panel-lead'>Jan 25, 2023 12:06:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 23, 2023 04:49:00 PM</div>
+			 		<div class='panel-lead'>Jan 25, 2023 12:07:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 10.880</div>
+					<div class='panel-lead'>00 00 52.069</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -521,8 +695,26 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@esc2</td>
-							<td>4</td>
+							<td>@Smoke</td>
+							<td>3</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									75%
+							</td>
+						</tr>
+						<tr>
+							<td>@HappyPath</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@SignUp-Login</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -530,12 +722,12 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@GoogleTest</td>
-							<td>4</td>
-							<td>0</td>
+							<td>@RegressionDemoBlaze</td>
+							<td>3</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									75%
 							</td>
 						</tr>
 					</table>
@@ -550,34 +742,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 4,
-				passChild: 4,
-				failChild: 0,
+				passChild: 3,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 16,
-				passGrandChild: 16,
-				failGrandChild: 0,
+				grandChildCount: 14,
+				passGrandChild: 12,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 1,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Probar las busuqedas de Google":10.565
+			        "Revisar la funcionalidad del sitio de compras demoblaze.com":51.76
 			};
 		</script>
 		

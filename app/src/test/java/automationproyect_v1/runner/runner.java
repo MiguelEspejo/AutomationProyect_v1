@@ -14,12 +14,12 @@ import org.junit.runner.RunWith;
 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "json:target/cucumber-reports.json" },
          monochrome = true, 
-         tags = "@esc2")
+         tags = "@Smoke")
 
 public class runner {
     public runner() {
-    }
 
+    }
     @AfterClass
     public static void cleanDriver() {
         BasePage.closeBrowser();

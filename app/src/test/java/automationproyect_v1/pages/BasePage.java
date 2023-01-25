@@ -99,6 +99,10 @@ public class BasePage {
         Thread.sleep(2000); //cambiar por otra espera optima
         driver.switchTo().alert().accept();
     }
+    public String obtenerTextoAlerta() throws InterruptedException {
+        Thread.sleep(2000); //cambiar por otra espera optima
+        return driver.switchTo().alert().getText();
+    }
 
     public String textFromElement(String locator) {
         return this.Find(locator).getText();

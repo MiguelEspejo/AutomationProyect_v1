@@ -11,10 +11,12 @@ public class DemoblazeSteps {
     public void navigateToTiendaDemoBlaze() {
         tiendaDemoBlaze.navigateToDemoBlaze();
     }
+
     @When("^Selecciono diferentes productos de la tienda y los agrego al carrito$")
     public void selProdTienda() throws InterruptedException {
         tiendaDemoBlaze.selectArcticulos();
     }
+
     @Then("^Ingreso al carrito y valido que se muestren correctamente$")
     public void carritoCompras() throws InterruptedException {
         tiendaDemoBlaze.terminarCompra();
@@ -25,6 +27,7 @@ public class DemoblazeSteps {
     public void selProdTiendaEliminar() throws InterruptedException {
         tiendaDemoBlaze.selectArcticulosEliminar();
     }
+
     @Then("^Ingreso al carrito y elimino productos no deseados$")
     public void carritoComprasEliminar() throws InterruptedException {
         tiendaDemoBlaze.eliminarProdCarrito();
@@ -35,6 +38,7 @@ public class DemoblazeSteps {
     public void selecOpcContacto() throws InterruptedException {
         tiendaDemoBlaze.selecionarContacto();
     }
+
     @Then("^Capturo la infomracion de contacto y envio el mensaje$")
     public void capturaInfContac() throws InterruptedException {
         tiendaDemoBlaze.capturaInfoContacto();
@@ -45,11 +49,16 @@ public class DemoblazeSteps {
     public void seleccOpcCrearUsuario() throws InterruptedException {
         tiendaDemoBlaze.CrearUsuario();
     }
+
     @Then("^Valido que se creeo el usuario correctamente$")
     public void iniciarSesion() throws InterruptedException {
         tiendaDemoBlaze.realizarLogin();
     }
 
+    @And("^Verifico que no se permita registrar un usuario con el mismo username y que no se permita ingresar con credenciales invalidas$")
+    public void registroUsrRepLoginInv() throws InterruptedException {
+        tiendaDemoBlaze.registroLoginInvalido();
+    }
 
 
 }

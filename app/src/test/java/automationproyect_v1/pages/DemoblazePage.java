@@ -4,7 +4,6 @@ package automationproyect_v1.pages;
 import org.junit.Assert;
 
 
-
 public class DemoblazePage extends BasePage {
 
     private String locPrimerResultado = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[1]/div[1]";
@@ -14,12 +13,12 @@ public class DemoblazePage extends BasePage {
     private String locElaceCart = "//a[@id='cartur']";
     private String locBtnPlaceOrder = "//button[contains(text(),'Place Order')]";
     private String locInputName = "//input[@id='name']";
-    private String locInputContry ="//input[@id='country']";
-    private String locInputCity ="//input[@id='city']";
-    private String locInputCard ="//input[@id='card']";
-    private String locInputMonth ="//input[@id='month']";
-    private String locInputYear ="//input[@id='year']";
-    private String locBtnPurchase ="//button[contains(text(),'Purchase')]";
+    private String locInputContry = "//input[@id='country']";
+    private String locInputCity = "//input[@id='city']";
+    private String locInputCard = "//input[@id='card']";
+    private String locInputMonth = "//input[@id='month']";
+    private String locInputYear = "//input[@id='year']";
+    private String locBtnPurchase = "//button[contains(text(),'Purchase')]";
     private String locCompraFinalizada = "//h2[contains(text(),'Thank you for your purchase!')]";
     private String locTotalCarrito = "//h3[@id='totalp']";
     private String locTotalModal = "//label[@id='totalm']";
@@ -41,13 +40,12 @@ public class DemoblazePage extends BasePage {
     private String locEnlaceLogIn = "//a[@id='login2']";
     private String locInputLoginUser = "//input[@id='loginusername']";
     private String locInputLoginPassword = "//input[@id='loginpassword']";
+    private String locBtnLogOut = "//a[@id='logout2']";
     private String locBtnSignIn = "//button[contains(text(),'Log in')]";
     private String locNomUsrLogin = "//a[@id='nameofuser']";
 
     private String usuarioRandom;
-
-
-
+    private String locBtnCloseSignIn = "//body/div[@id='logInModal']/div[1]/div[1]/div[3]/button[1]";
 
 
     public DemoblazePage() {
@@ -61,26 +59,29 @@ public class DemoblazePage extends BasePage {
     public void selectArcticulos() throws InterruptedException {
         this.clickElement(this.locPrimerResultado);
         this.clickElement(this.locBtnAgregarCarrito);
+        Assert.assertEquals("No se agrego el producto correctamente ", "Product added", this.obtenerTextoAlerta());
         this.acceptAlert();
         this.clickElement(this.locEnlaceHome);
         this.clickElement(this.locSegundoResultado);
         this.clickElement(this.locBtnAgregarCarrito);
+        Assert.assertEquals("No se agrego el producto correctamente ", "Product added", this.obtenerTextoAlerta());
         this.acceptAlert();
         this.clickElement(this.locEnlaceHome);
     }
+
     public void terminarCompra() throws InterruptedException {
         this.clickElement(this.locElaceCart);
         this.clickElement(this.locBtnPlaceOrder);
-        this.write(this.locInputName,"Jose Perez");
-        this.write(this.locInputContry,"CDMX");
-        this.write(this.locInputCity,"Mexico");
-        this.write(this.locInputCard,"4512 4512 4512 4512");
-        this.write(this.locInputMonth,"05");
-        this.write(this.locInputYear,"25");
+        this.write(this.locInputName, "Jose Perez");
+        this.write(this.locInputContry, "CDMX");
+        this.write(this.locInputCity, "Mexico");
+        this.write(this.locInputCard, "4512 4512 4512 4512");
+        this.write(this.locInputMonth, "05");
+        this.write(this.locInputYear, "25");
         this.clickElement(this.locBtnPurchase);
-        Assert.assertEquals("El Total mostrado en carrito es incorrecto ","1180", textFromElement(locTotalCarrito));
-        Assert.assertEquals("El Total mostrado en la modal es incorrecto ","Total: 1180", textFromElement(locTotalModal));
-        Assert.assertEquals("La compra no se Finalizo correctamente ","Thank you for your purchase!", textFromElement(locCompraFinalizada));
+        Assert.assertEquals("El Total mostrado en carrito es incorrecto ", "1180", textFromElement(locTotalCarrito));
+        Assert.assertEquals("El Total mostrado en la modal es incorrecto ", "Total: 1180", textFromElement(locTotalModal));
+        Assert.assertEquals("La compra no se Finalizo correctamente ", "Thank you for your purchase!", textFromElement(locCompraFinalizada));
         Thread.sleep(2000); //quitar el sleep
         this.clickElement(this.locBtnOk);
     }
@@ -90,15 +91,17 @@ public class DemoblazePage extends BasePage {
         this.clickElement(this.locEnlaceCategoria);
         this.clickElement(this.locPrimerResultado);
         this.clickElement(this.locBtnAgregarCarrito);
+        Assert.assertEquals("No se agrego el producto correctamente ", "Product added", this.obtenerTextoAlerta());
         this.acceptAlert();
         this.clickElement(this.locEnlaceHome);
     }
+
     public void eliminarProdCarrito() throws InterruptedException {
         this.clickElement(this.locElaceCart);
         this.clickElement(this.locEnlaceDelete);
         Thread.sleep(2000); //quitar el sleep
         this.clickElement(this.locBtnPlaceOrder);
-        Assert.assertEquals("El Total mostrado en la modal es incorrecto ","Total:", textFromElement(locTotalModal));
+        Assert.assertEquals("El Total mostrado en la modal es incorrecto ", "Total:", textFromElement(locTotalModal));
         Thread.sleep(2000); //quitar el sleep
         this.clickElement(this.locBtnCancelar);
     }
@@ -106,33 +109,54 @@ public class DemoblazePage extends BasePage {
     //envio mensaje de contacto
     public void selecionarContacto() throws InterruptedException {
         this.clickElement(this.locEnlaceContact);
-
     }
+
     public void capturaInfoContacto() throws InterruptedException {
-        this.write(this.locInputContact,"RobertoM@gmail.com");
-        this.write(this.locInputContactName,"Roberto Martinez");
-        this.write(this.locInputMenssage,"Mensaje de contacto demo");
+        this.write(this.locInputContact, "RobertoM@gmail.com");
+        this.write(this.locInputContactName, "Roberto Martinez");
+        this.write(this.locInputMenssage, "Mensaje de contacto demo");
         this.clickElement(this.locBtnSendMenssage);
+        Assert.assertEquals("No se envio el mensaje de contacto correctamente ", "Thanks for the message!!", this.obtenerTextoAlerta());
         this.acceptAlert();
     }
 
     //SignUp-Login
     public void CrearUsuario() throws InterruptedException {
-        int numRandom = (int)(Math.random()*100+1);
+        int numRandom = (int) (Math.random() * 1000 + 1);
         this.clickElement(this.locEnlaceSignUp);
-        usuarioRandom = "UsuLop3z"+numRandom;
-        this.write(this.locInputUserName,usuarioRandom);
-        this.write(this.locInputPassword ,"123456");
+        usuarioRandom = "UsuLop3z" + numRandom;
+        this.write(this.locInputUserName, usuarioRandom);
+        this.write(this.locInputPassword, "123456");
         this.clickElement(this.locBtnSignUp);
+        Assert.assertEquals("No se creo el usuario correctamente, usuario ya existente ", "Sign up successful.", this.obtenerTextoAlerta());
         this.acceptAlert();
-
     }
+
     public void realizarLogin() throws InterruptedException {
         this.clickElement(this.locEnlaceLogIn);
-        this.write(this.locInputLoginUser,usuarioRandom);
-        this.write(this.locInputLoginPassword,"123456");
+        this.write(this.locInputLoginUser, usuarioRandom);
+        this.write(this.locInputLoginPassword, "123456");
         this.clickElement(this.locBtnSignIn);
-        Assert.assertEquals("No se inicio sesión correctamente con el usuario capturado ","Welcome "+usuarioRandom.toString(), textFromElement(locNomUsrLogin));
+        Assert.assertEquals("El usuario no se registro correctamente ", "Welcome " + usuarioRandom, this.textFromElement(this.locNomUsrLogin));
+        this.clickElement(this.locBtnLogOut);
+    }
+
+    public void registroLoginInvalido() throws InterruptedException {
+        this.clickElement(this.locEnlaceSignUp);
+        this.write(this.locInputUserName, "Lop3z");
+        this.write(this.locInputPassword, "123456");
+        this.clickElement(this.locBtnSignUp);
+        Assert.assertEquals("El usuario no existe y se registro correctamente, el usuario ya existe ", "This user already exist.", this.obtenerTextoAlerta());
+        this.acceptAlert();
+        this.clickElement(this.locBtnSignUpClose);
+
+        this.clickElement(this.locEnlaceLogIn);
+        this.write(this.locInputLoginUser, "Lop3z");
+        this.write(this.locInputLoginPassword, "123");
+        this.clickElement(this.locBtnSignIn);
+        Assert.assertEquals("El usuario inicio sesión correctamente, contraseña incorrecta ", "Wrong password.", this.obtenerTextoAlerta());
+        this.acceptAlert();
+        this.clickElement(this.locBtnCloseSignIn);
 
     }
 
