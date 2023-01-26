@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "json:target/cucumber-reports.json" },
          monochrome = true, 
-         tags = "@Smoke")
+         tags = "@Smoke"
+)
 
 public class runner {
     public runner() {

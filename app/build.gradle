@@ -15,7 +15,7 @@ plugins {
 group 'Framework_automatizacion'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 13
+    sourceCompatibility = 13
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -55,6 +55,7 @@ application {
     mainClass = 'automationproyect_v1'
 
 }
+
 /*
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
